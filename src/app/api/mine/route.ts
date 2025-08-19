@@ -1,22 +1,16 @@
 import { NextResponse } from 'next/server'
-
-// Example: import your on-chain mining function
-// import { mineOnChain } from '@/lib/chain'
+import { mineOnChain } from '@/lib/chain'
 
 export async function POST() {
   try {
-    // Call your real mining implementation here
-    // const { blockNumber, reward } = await mineOnChain(userWallet)
+    const userWallet = process.env.TEST_USER_WALLET as `0x${string}`
+    if (!userWallet) throw new Error('No user wallet set')
 
-    // Example placeholder values – replace with real results
-    const blockNumber = 101
-    const reward = 1
+    const { blockNumber, reward, txHash } = await mineOnChain(userWallet)
 
-    return NextResponse.json({ blockNumber, reward })
+    return NextResponse.json({ blockNumber, reward, txHash })
   } catch (err: any) {
-    return NextResponse.json(
-      { error: err.message || 'Mining failed' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: err.message || 'Mining failed' }, { status: 500 })
   }
 }
+
