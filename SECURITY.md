@@ -32,17 +32,11 @@ If you discover a security vulnerability in this project:
 
 ---
 
-## Responsible Disclosure
+## Encryption for Sensitive Reports
 
-We kindly ask researchers and users to follow responsible disclosure practices:
-- Report vulnerabilities directly to us via email
-- Allow reasonable time for us to investigate and deploy a fix before publicly disclosing details
-- Avoid exploiting the vulnerability beyond what is necessary for proof‑of‑concept
+For extra privacy and to protect sensitive vulnerability data in transit, you may encrypt your message using our PGP key:
 
----
+**Public Key Fingerprint**: `ABCD 1234 EFGH 5678 IJKL 9012 MNOP 3456 QRST 7890 UVWX`
 
-## Security Commitment
-
-We take the security of our users and systems seriously.  
-By working together, we can ensure that this project remains safe and reliable for everyone.
+**Public Key Block**:  
 
