@@ -1,3 +1,4 @@
+// src/app/api/mine/route.ts
 import { NextResponse } from 'next/server'
 import { mineOnChain } from '@/lib/chain'
 
